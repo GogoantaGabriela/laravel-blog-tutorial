@@ -33,14 +33,18 @@ services:
     container_name: laravel-blog-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: laravel_blog
+
+      MYSQL_DATABASE: laravel_blog_day4
+
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_PASSWORD: user_password
       MYSQL_USER: laravel_user
     volumes:
       - dbdata:/var/lib/mysql
     ports:
-      - "3306:3306"
+
+      - "3309:3306"
+
     networks:
       - laravel-blog
 
